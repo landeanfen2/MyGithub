@@ -1,0 +1,171 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Jquery+Bootstrap 实现的树形控件</title>
+
+    <!--图标样式-->
+    <link href="~/Content/Tree1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Tree1/css/style.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Content/jqTree/js/jqTree.js"></script>
+
+    <script type="text/javascript">
+        
+
+function BunchClick(aa) {
+    //alert(aa);
+}
+    </script>
+
+</head>
+<body>
+
+    <div class="tree well">
+        <ul id="ul_tree">
+            @*<li>
+                <span><i class="icon-minus-sign"></i> 顶级节点1</span> <a href="">Goes somewhere</a>
+                <ul>
+                    <li>
+                        <span><i class="icon-minus-sign"></i> 一级节点1</span> <a href=""></a>
+                        <ul>
+                            <li>
+                                <span><i class="icon-leaf"></i> 二级节点1_1</span> <a href=""></a>
+                            </li>
+                            <li>
+                                <span><i class="icon-leaf"></i> 二级节点1_1</span> <a href=""></a>
+                            </li>
+                            <li>
+                                <span><i class="icon-leaf"></i> 二级节点1_1</span> <a href=""></a>
+                            </li>
+                            <li>
+                                <span><i class="icon-leaf"></i> 二级节点1_1</span> <a href=""></a>
+                            </li>
+                            <li>
+                                <span><i class="icon-leaf"></i> 二级节点1_1</span> <a href=""></a>
+                            </li>
+                            <li>
+                                <span><i class="icon-leaf"></i> 二级节点1_1</span> <a href=""></a>
+                            </li>
+                            <li>
+                                <span><i class="icon-leaf"></i> 二级节点1_1</span> <a href=""></a>
+                            </li>
+                            <li>
+                                <span><i class="icon-leaf"></i> 二级节点1_1</span> <a href=""></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><i class="icon-minus-sign"></i> 一级节点2</span> <a href=""></a>
+                        <ul>
+                            <li>
+                                <span><i class="icon-leaf"></i>二级节点2_1</span> <a href=""></a>
+                            </li>
+                            <li>
+                                <span><i class="icon-minus-sign"></i> 二级节点2_2</span> <a href=""></a>
+                                <ul>
+                                    <li>
+                                        <span><i class="icon-minus-sign"></i>三级节点2_1</span> <a href=""></a>
+                                        <ul>
+                                            <li>
+                                                <span><i class="icon-leaf"></i>四级节点2_1</span> <a href=""></a>
+                                            </li>
+                                            <li>
+                                                <span><i class="icon-leaf"></i> 四级节点2_2</span> <a href=""></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span><i class="icon-leaf"></i>三级节点2_2</span> <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <span><i class="icon-leaf"></i> 三级节点2_3</span> <a href=""></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span><i class="icon-leaf"></i>二级节点2_3</span> <a href=""></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span><i class="icon-folder-open"></i> 顶级节点2</span> <a href=""></a>
+                <ul>
+                    <li>
+                        <span><i class="icon-leaf"></i> 一级节点2_1</span> <a href=""></a>
+                    </li>
+                </ul>
+            </li>*@
+        </ul>
+    </div>
+
+    <div class="tree">
+        <ul>
+            <li>
+                <span><i class="icon-calendar"></i> 2013, Week 2</span>
+                <ul>
+                    <li>
+                        <span class="badge badge-success"><i class="icon-minus-sign"></i> Monday, January 7: 8.00 hours</span>
+                        <ul>
+                            <li>
+                                <a href=""><span><i class="icon-time"></i> 8.00</span> &ndash; Changed CSS to accomodate...</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="badge badge-success"><i class="icon-minus-sign"></i> Tuesday, January 8: 8.00 hours</span>
+                        <ul>
+                            <li>
+                                <span><i class="icon-time"></i> 6.00</span> &ndash; <a href="">Altered code...</a>
+                            </li>
+                            <li>
+                                <span><i class="icon-time"></i> 2.00</span> &ndash; <a href="">Simplified our approach to...</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="badge badge-warning"><i class="icon-minus-sign"></i> Wednesday, January 9: 6.00 hours</span>
+                        <ul>
+                            <li>
+                                <a href=""><span><i class="icon-time"></i> 3.00</span> &ndash; Fixed bug caused by...</a>
+                            </li>
+                            <li>
+                                <a href=""><span><i class="icon-time"></i> 3.00</span> &ndash; Comitting latest code to Git...</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="badge badge-important"><i class="icon-minus-sign"></i> Wednesday, January 9: 4.00 hours</span>
+                        <ul>
+                            <li>
+                                <a href=""><span><i class="icon-time"></i> 2.00</span> &ndash; Create component that...</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span><i class="icon-calendar"></i> 2013, Week 3</span>
+                <ul>
+                    <li>
+                        <span class="badge badge-success"><i class="icon-minus-sign"></i> Monday, January 14: 8.00 hours</span>
+                        <ul>
+                            <li>
+                                <span><i class="icon-time"></i> 7.75</span> &ndash; <a href="">Writing documentation...</a>
+                            </li>
+                            <li>
+                                <span><i class="icon-time"></i> 0.25</span> &ndash; <a href="">Reverting code back to...</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

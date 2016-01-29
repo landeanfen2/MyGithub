@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>zTree</title>
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.js"></script>
+    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery.ztree.all-3.5.js"></script>
+    <link href="~/Content/zTree.theme.metro.css" rel="stylesheet" />
+
+    <script src="~/Scripts/Home/zTree.js"></script>
+</head>
+<body>
+    <div> 
+        <div id="menuContent" class="menuContent" style="width:95%;background-color:rgb(240,240,240);border:1px solid rgb(170,170,170);z-index:10;">
+            <ul id="treeDemo" class="ztree" style="margin-top:0; width:100%; height:auto;"></ul>
+        </div>
+        <div style="margin-top:30px;" class="col-xs-3">
+            <input type="text" class="form-control" id="txt_ztree" placeholder="点击文本框出现ztree" onclick="showMenu()" />
+            <div id="menuContent2" class="menuContent" style="display:none;position: absolute;width:95%;background-color:rgb(240,240,240);border:1px solid rgb(170,170,170);z-index:10;">
+                <ul id="treeDemo2" class="ztree" style="margin-top:0; width:160px; height:auto;"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
