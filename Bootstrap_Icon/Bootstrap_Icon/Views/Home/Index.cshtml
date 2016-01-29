@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bootstrap icon picker</title>
+    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap-icon-picker-master/Bootstrap-icon-picker-master/css/icon-picker.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Content/Bootstrap-icon-picker-master/Bootstrap-icon-picker-master/js/iconPicker.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //bootstrap icon初始化
+            $("#txt_boostrap_icon").iconPicker();
+        });
+
+        function Query(){
+            var bootstrap_icon = $("#txt_boostrap_icon").val();
+            alert(bootstrap_icon);
+        }
+    </script>
+</head>
+<body>
+    <div class="panel-body" style="padding:0px;">
+        <div class="panel panel-default" style="margin-bottom:0px;border:0px solid white;">
+            @*<div class="panel-heading">查询条件</div>*@
+            <div class="panel-body">
+                <form id="formSearch" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txt_boostrap_icon" class="col-xs-2 control-label">Bootstrap icon picker</label>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" id="txt_boostrap_icon">
+                        </div>                        
+                        <div class="col-xs-2" style="margin-top:2px;">
+                            <input type="button" class="btn-primary" onclick="Query()" style="width:100px;height:30px;margin-left:50px;" value="查询" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

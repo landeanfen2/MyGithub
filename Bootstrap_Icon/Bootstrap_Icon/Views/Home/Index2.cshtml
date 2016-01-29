@@ -1,0 +1,95 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>jQuery fontIconPicker</title>
+
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Content/fontIconPicker-2.0.0/jquery.fonticonpicker.js"></script>
+
+    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/fontIconPicker-2.0.0/css/jquery.fonticonpicker.css" rel="stylesheet" />
+    <link href="~/Content/fontIconPicker-2.0.0/themes/grey-theme/jquery.fonticonpicker.grey.css" rel="stylesheet" />
+    <link href="~/Content/fontIconPicker-2.0.0/themes/dark-grey-theme/jquery.fonticonpicker.darkgrey.css" rel="stylesheet" />
+    <link href="~/Content/fontIconPicker-2.0.0/themes/bootstrap-theme/jquery.fonticonpicker.bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/fontIconPicker-2.0.0/themes/inverted-theme/jquery.fonticonpicker.inverted.css" rel="stylesheet" />
+    <link href="~/Content/fontIconPicker-2.0.0/fontIconPicker-2.0.0/demo/fontello-7275ca86/css/fontello.css" rel="stylesheet" />
+
+    <link href="~/Content/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .glyphicon-test13 {
+            background: url('/Content/images/icons/p13.png') no-repeat center center!important;
+            height: 15px!important;
+            width: 14px!important;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            //jquery icon初始化
+            $('#myselect').fontIconPicker({
+                theme: 'fip-bootstrap',//四种主题风格：fip-grey, fip-darkgrey, fip-bootstrap, fip-inverted
+                source: ["icon-music", "icon-search", "icon-mail", "icon-mail-alt", "icon-heart", "icon-heart-empty", "icon-star", "icon-star-empty", "icon-star-half", "icon-star-half-alt", "icon-user", "icon-users", "icon-male", "icon-female", "icon-video", "icon-videocam", "icon-picture", "icon-camera", "icon-camera-alt", "icon-th-large", "icon-th", "icon-th-list", "icon-ok", "icon-ok-circled", "icon-ok-circled2", "icon-ok-squared", "icon-cancel", "icon-cancel-circled", "icon-cancel-circled2", "icon-plus", "icon-plus-circled", "icon-plus-squared", "icon-plus-squared-small", "icon-minus", "icon-minus-circled", "icon-minus-squared", "icon-minus-squared-alt", "icon-minus-squared-small", "icon-help", "icon-help-circled", "icon-info-circled", "icon-info", "icon-home", "icon-link", "icon-unlink", "icon-link-ext", "icon-link-ext-alt", "icon-attach", "icon-lock", "icon-lock-open", "icon-lock-open-alt", "icon-pin", "icon-eye", "icon-eye-off", "icon-tag", "icon-tags", "icon-bookmark", "icon-bookmark-empty", "icon-flag", "icon-flag-empty", "icon-flag-checkered", "icon-thumbs-up", "icon-thumbs-down", "icon-thumbs-up-alt", "icon-thumbs-down-alt", "icon-download", "icon-upload", "icon-download-cloud", "icon-upload-cloud", "icon-reply", "icon-reply-all", "icon-forward", "icon-quote-left", "icon-quote-right", "icon-code", "icon-export", "icon-export-alt", "icon-pencil", "icon-pencil-squared", "icon-edit", "icon-print", "icon-retweet", "icon-keyboard", "icon-gamepad", "icon-comment", "icon-chat", "icon-comment-empty", "icon-chat-empty", "icon-bell", "icon-bell-alt", "ion-android-alert", "ion-android-apps", "ion-android-archive","ion-android-arrow-back"],
+                emptyIcon: true,//是否显示空
+                emptyIconValue: "none",//空值
+                iconsPerPage: 20, //每页显示图标的个数，默认20
+                hasSearch: true,//是否显示试试框，默认true
+
+            }); // Load with default options
+        });
+
+        function Query(){
+            //var jquery_icon = $("#myselect").val();
+            //alert(jquery_icon);
+        }
+    </script>
+</head>
+<body>
+    <div class="panel-body" style="padding:0px;">
+        <div class="panel panel-default" style="margin-bottom:0px;border:0px solid white;">
+            @*<div class="panel-heading">查询条件</div>*@
+            <div class="panel-body">
+                <form id="formSearch" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="txt_jquery_icon" class="col-xs-2 control-label">jQuery fontIconPicker</label>
+                        <div class="col-xs-3">
+                            <select id="myselect" name="myselect" class="myselect">
+                                <option value="">No icon</option>
+                                <option>icon-user</option>
+                                <option>icon-search</option>
+                                <option>icon-right-dir</option>
+                                <option>icon-star</option>
+                                <option>icon-cancel</option>
+                                <option>icon-help-circled</option>
+                                <option>icon-info-circled</option>
+                                <option>icon-eye</option>
+                                <option>icon-tag</option>
+                                <option>icon-bookmark</option>
+                                <option>icon-heart</option>
+                                <option>icon-thumbs-down-alt</option>
+                                <option>icon-upload-cloud</option>
+                                <option>icon-phone-squared</option>
+                                <option>icon-cog</option>
+                                <option>icon-wrench</option>
+                                <option>icon-volume-down</option>
+                                <option>icon-down-dir</option>
+                                <option>icon-up-dir</option>
+                                <option>icon-left-dir</option>
+                                <option>icon-thumbs-up-alt</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-2" style="margin-top:2px;">
+                            <input type="button" class="btn-primary" onclick="Query()" style="width:100px;height:30px;margin-left:50px;" value="查询" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
